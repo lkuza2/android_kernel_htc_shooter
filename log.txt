@@ -1,0 +1,32 @@
+Script started on Tue 24 Jul 2012 10:38:34 PM MST
+]0;michaelc@michaelc-iMac: ~/android/kernels/android_kernel_htc_shootermichaelc@michaelc-iMac:~/android/kernels/android_kernel_htc_shooter$ make -j5
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+make[1]: `include/generated/mach-types.h' is up to date.
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CHK     kernel/config_data.h
+  CC      block/bfq-iosched.o
+In file included from block/bfq-iosched.c:128:
+block/bfq-ioc.c: In function 'bfq_alloc_io_context':
+block/bfq-ioc.c:172: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c: In function 'bfq_update_io_thinktime':
+block/bfq-iosched.c:1990: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1993: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1993: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1994: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1994: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1995: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1995: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:1995: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c: In function 'bfq_update_idle_window':
+block/bfq-iosched.c:2065: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c:2066: error: 'struct cfq_io_context' has no member named 'ttime'
+block/bfq-iosched.c: In function 'bfq_completed_request':
+block/bfq-iosched.c:2204: error: 'struct cfq_io_context' has no member named 'ttime'
+make[1]: *** [block/bfq-iosched.o] Error 1
+make: *** [block] Error 2
+make: *** Waiting for unfinished jobs....
+]0;michaelc@michaelc-iMac: ~/android/kernels/android_kernel_htc_shootermichaelc@michaelc-iMac:~/android/kernels/android_kernel_htc_shooter$ exit
+
+Script done on Tue 24 Jul 2012 10:38:52 PM MST
