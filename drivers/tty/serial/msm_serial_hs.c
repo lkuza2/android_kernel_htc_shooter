@@ -1736,7 +1736,7 @@ static int msm_hs_startup(struct uart_port *uport)
 			return ret;
 	}
 
-	ret = request_irq(uport->irq, msm_hs_isr, IRQF_TRIGGER_HIGH,
+	ret = request_irq(uport->irq, msm_hs_isr, IRQF_TRIGGER_HIGH | IRQF_NO_SUSPEND,
 			  "msm_hs_uart", msm_uport);
 	if (unlikely(ret))
 		return ret;
