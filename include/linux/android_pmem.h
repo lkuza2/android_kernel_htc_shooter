@@ -30,7 +30,7 @@
 #define PMEM_KERNEL_TEST_LARGE_REGION_NUMBER_TEST_IOCTL \
 	_IO(PMEM_KERNEL_TEST_MAGIC, 5)
 
-#define PMEM_IOCTL_MAGIC 'q'
+#define PMEM_IOCTL_MAGIC 'p'
 #define PMEM_GET_PHYS		_IOW(PMEM_IOCTL_MAGIC, 1, unsigned int)
 #define PMEM_MAP		_IOW(PMEM_IOCTL_MAGIC, 2, unsigned int)
 #define PMEM_GET_SIZE		_IOW(PMEM_IOCTL_MAGIC, 3, unsigned int)
